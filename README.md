@@ -1,1 +1,1 @@
-MagHuellas - La mejor tienda de accesorios para tu mascotas.
+MagHuellas - La mejor tienda de accesorios para tus mascotas.
