@@ -1,0 +1,39 @@
+<%- include('../template/cabeceraAdmin', { tituloWeb: 'Agregar Producto' }) %>
+
+<div class="container mt-4 categories-container">
+    <div class="title-container">
+        <h1 class="text-center">Agregar Producto</h1>
+    </div>
+    <form action="/admin/products" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea class="form-control" id="description" name="description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">Precio</label>
+            <input type="number" class="form-control" id="price" name="price" required>
+        </div>
+        <div class="form-group">
+            <label for="stock">Stock</label>
+            <input type="number" class="form-control" id="stock" name="stock" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Imagen</label>
+            <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+        </div>
+        <div class="form-group">
+            <label for="categoryId">Categoría:</label>
+            <select class="form-control" id="categoryId" name="categoryId">
+                <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>"><%= category.name %></option>
+                <% }); %>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Producto</button>
+    </form>
+</div>
+

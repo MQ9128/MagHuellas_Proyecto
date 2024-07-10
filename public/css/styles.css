@@ -1,0 +1,145 @@
+.shadow {
+    box-shadow: 0 0 10px rgba(22, 22, 22, 0.1); /* Agrega sombreado con un desenfoque de 10px */
+}
+
+/* Estilos para el botón de filtrado */
+.filter-button {
+    background-color: #007bff; /* Color de fondo */
+    color: #000; /* Color del texto (negro) */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Eliminar borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave */
+    width: 100px; /* Ancho del botón */
+}
+
+/* Estilos cuando se pasa el cursor sobre el botón */
+.filter-button:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro */
+}
+
+/* Estilos para el cajón de entrada del filtro */
+.filter-input {
+    width: calc(100% - 120px); /* Ancho total menos el ancho del botón */
+    margin-right: 10px; /* Espacio entre el cajón de entrada y el botón */
+}
+
+body {
+    background-color: #f5f5f5; /* Fondo sólido para todo el body */
+    font-family: 'Poetsen One', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.body-bg {
+    background-image: url('/img/background-huellas.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: left, right;
+    padding: 20px 0;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    margin-bottom: 20px;
+    background-color: #ff6f61;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffe6e1;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    border: none;
+    transition: transform 0.2s;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #ff6f61;
+}
+
+.btn-primary {
+    background-color: #ff6f61;
+    border-color: #ff6f61;
+}
+
+.btn-primary:hover {
+    background-color: #ff8561;
+    border-color: #ff8561;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    color: #333;
+}
+
+footer {
+    background-color: #333; /* Fondo oscuro para el footer */
+    color: #020202;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer .text-uppercase {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+footer .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+footer .list-unstyled a {
+    color: #ccc; /* Color más claro para enlaces */
+    text-decoration: none;
+}
+
+footer .list-unstyled a:hover {
+    color: #fff; /* Color blanco para enlaces al pasar el cursor */
+}
+
+.category-box {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+

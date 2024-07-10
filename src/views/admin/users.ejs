@@ -1,0 +1,29 @@
+<%- include('../template/cabeceraAdmin', { tituloWeb: 'Administrar Usuarios' }) %>
+
+<div class="content container mt-4 users-container">
+    <div class="title-container">
+    <h1 class="text-center">Usuarios Registrados</h1>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Fecha de Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.birth_date ? user.birth_date.toLocaleDateString('es-ES') : '' %></td>
+                    <td><%= user.created_at ? user.created_at.toLocaleDateString('es-ES') : '' %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>

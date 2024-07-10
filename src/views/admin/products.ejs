@@ -1,0 +1,38 @@
+<%- include('../template/cabeceraAdmin', { tituloWeb: 'Productos' }) %>
+
+<div class="container mt-4 categories-container">
+    <div class="title-container">
+    <h1 class="text-center">Lista de Productos</h1>
+    </div>
+    <div class="text-right mb-3">
+    <a href="/admin/products/new" class="btn btn-primary">Agregar Producto</a>
+    </div>
+    <table class="table mt-3"   >
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.forEach(product => { %>
+                <tr>
+                    <td><%= product.name %></td>
+                    <td><%= product.description %></td>
+                    <td><%= product.price %></td>
+                    <td><%= product.stock %></td>
+                    <td>
+                        <a href="/admin/products/<%= product.id %>/edit" class="btn btn-warning">Editar</a>
+                        <form action="/admin/products/<%= product.id %>/delete" method="POST" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+

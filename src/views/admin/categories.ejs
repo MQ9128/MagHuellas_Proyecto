@@ -1,0 +1,41 @@
+<%- include('../template/cabeceraAdmin', { tituloWeb: 'Administrar Categorías' }) %>
+
+<div class="container mt-4 categories-container" >
+    <div class="title-container">
+    <h1 class="text-center">Categorías</h1>
+    </div>
+
+    <!-- Botón para agregar nueva categoría -->
+    <div class="text-right mb-3">
+        <a href="/admin/categories/new" class="btn btn-primary">Agregar Nueva Categoría</a>
+    </div>
+
+    <!-- Tabla de categorías -->
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% categories.forEach(category => { %>
+            <tr>
+                <td><%= category.id %></td>
+                <td><%= category.name %></td>
+                <td><%= category.description %></td>
+                <td>
+                    <a href="/admin/categories/<%= category.id %>/edit" class="btn btn-warning btn-sm">Editar</a>
+                    <form action="/admin/categories/<%= category.id %>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+

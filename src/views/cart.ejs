@@ -1,0 +1,56 @@
+<%- include('template/cabecera', { tituloWeb: 'Carrito de Compras' }) %>
+
+<div class="container mt-5">
+    <h1>Carrito de Compras</h1>
+
+    <% if (cart && cart.items && cart.items.length > 0) { %>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cart.items.forEach(item => { %>
+                    <tr>
+                        <td><%= item.product.name %></td>
+                        <td>
+                            <form action="/cart/update" method="post">
+                                <input type="hidden" name="cartItemId" value="<%= item.cartItemId %>">
+                                <input type="number" name="quantity" value="<%= item.quantity %>" min="1" max="99">
+                                <button type="submit" class="btn btn-sm btn-primary">Actualizar</button>
+                            </form>
+                        </td>
+                        <td>$<%= item.product.price %></td>
+                        <td>$<%= item.product.price * item.quantity %></td>
+                        <td>
+                            <form action="/cart/remove" method="post">
+                                <input type="hidden" name="cartItemId" value="<%= item.cartItemId %>">
+                                <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+                <tr>
+                    <td colspan="3"><strong>Total:</strong></td>
+                    <td>$<%= cart.total %></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="/cart/crear-pedido" method="post">
+            <button type="submit" class="btn btn-primary">Crear Pedido</button>
+        </form>
+    <% } else { %>
+        <p>Tu carrito está vacío.</p>
+    <% } %>
+</div>
+
+<%- include('template/footer') %>
+
+

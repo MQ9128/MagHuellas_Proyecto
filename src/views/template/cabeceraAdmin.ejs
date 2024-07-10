@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= tituloWeb %></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap' );
+        body {
+            font-family: 'Poetsen One', sans-serif !important;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/admin-styles.css"> <!-- Nueva hoja de estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- En tu archivo HTML -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="MagHuellas">
+            MagHuella's
+        </a>
+        <a class="navbar-brand ml-auto" href="/" style="font-family: 'Poetsen One', sans-serif; font-size: 20px; color: #000;">
+            Cerrar sesión
+        </a>
+    </nav>
+    <div class="d-flex">
+        <div class="sidebar">
+            <a class="navbar-brand" href="/auth/profile">Admin Dashboard</a>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="/admin/categories">Categorías</a>
+                <a class="nav-link" href="/admin/products">Productos</a>
+                <a class="nav-link" href="/admin/orders">Órdenes</a>
+                <a class="nav-link" href="/admin/users">Usuarios</a>
+            </nav>
+        </div>
+
+        
+        
+        

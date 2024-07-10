@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    font-family: 'Poetsen One', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    background-image: url('/img/background-huellas.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: left, right;
+    min-height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #ff6f61;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar .navbar-brand {
+    color: #000;
+}
+
+.d-flex {
+    display: flex;
+    height: calc(100vh - 56px); /* Full height minus navbar height */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ff6f61;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 56px; /* Height of the navbar */
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.sidebar .navbar-brand {
+    color: #333;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar .nav-item {
+    margin-bottom: 10px;
+}
+
+.sidebar .nav-link {
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #ffe6e1;
+    color: #333;
+}
+
+.content {
+    margin-left: 250px; /* Same width as sidebar */
+    padding: 20px;
+    width: calc(100% - 250px);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    margin-top: 56px; /* To account for the fixed navbar height */
+    height: calc(100vh - 56px);
+}
+
+.table {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #ff6f61;
+    color: #333;
+    border-color: #ff6f61;
+}
+
+.btn-primary:hover {
+    background-color: #e2583e;
+    border-color: #e2583e;
+}
+
+.btn-warning {
+    background-color: #f0ad4e;
+    color: #333;
+    border-color: #f0ad4e;
+}
+
+.btn-warning:hover {
+    background-color: #eea236;
+    border-color: #eea236;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: #333;
+    border-color: #d9534f;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+    border-color: #c9302c;
+}
+
+/* Estilos para categorías y usuarios */
+.categories-container,
+.users-container{
+    margin-left: 250px;  /* Ajusta el margen para centrar verticalmente */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1400px; /* Ancho máximo ajustable según tus necesidades */
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    overflow-x: auto; /* Añade scroll horizontal si el contenido excede el ancho */
+    margin-bottom: 20px; /* Espacio inferior entre contenedores */
+}
+
+/* Alineación centrada del contenido dentro de categorías y usuarios */
+.categories-container table,
+.users-container table {
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+}
+
+/* Estilos específicos para la tabla de categorías */
+.categories-container .table,
+.users-container .table {
+    background-color: #fff; /* Fondo blanco sólido para la tabla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Estilos específicos para los botones de acción */
+.categories-container .btn-primary,
+.users-container .btn-primary {
+    background-color: #ff6f61;
+    color: #333;
+    border-color: #ff6f61;
+}
+
+.categories-container .btn-primary:hover,
+.users-container .btn-primary:hover {
+    background-color: #e2583e;
+    border-color: #e2583e;
+}
+
+.categories-container .btn-warning,
+.users-container .btn-warning {
+    background-color: #f0ad4e;
+    color: #333;
+    border-color: #f0ad4e;
+}
+
+.categories-container .btn-warning:hover,
+.users-container .btn-warning:hover {
+    background-color: #eea236;
+    border-color: #eea236;
+}
+
+.categories-container .btn-danger,
+.users-container .btn-danger {
+    background-color: #d9534f;
+    color: #333;
+    border-color: #d9534f;
+}
+
+.categories-container .btn-danger:hover,
+.users-container .btn-danger:hover {
+    background-color: #c9302c;
+    border-color: #c9302c;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #ff6f61;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #e2583e;
+}
+
+.title-container {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.title-container h1 {
+    color: #ff6f61; /* Rojo */
+    margin: 0;
+}
+
+
+.dashboard-container {
+    margin: 50px auto; /* Ajusta el margen para centrar vertical y horizontalmente */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Ancho máximo ajustable según tus necesidades */
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+}
